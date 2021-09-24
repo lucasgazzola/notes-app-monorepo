@@ -1,0 +1,22 @@
+GET http://localhost:3000/api/notes/614126516d38ca290d715d4c
+###
+
+POST http://localhost:3000/api/notes/ 
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNDBiN2IyMmE0NGUxMmNiYjRiM2FjZSIsInVzZXJuYW1lIjoicm9vdCIsImlhdCI6MTYzMTY1OTQ3NH0.p1Wfuq4sftcFYVv5QNnUMmRGu4PCEGOmAjkd92Yc--Q 
+
+{
+  "content": "Nota con el token user root",
+  "important": true
+}
+###
+DELETE http://localhost:3000/api/notes/6140964880f2dabd65031212
+###
+PUT http://localhost:3000/api/notes/61392bee1382a405e05e6b69
+Content-Type: application/json
+
+{
+  "content": "This is an user's note",
+  "important": true,
+  "userId": "613fad5fc08cef1d2b1beced"
+}
