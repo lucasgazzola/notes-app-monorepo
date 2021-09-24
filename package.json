@@ -14,7 +14,7 @@
   "scripts": {
     "build": "SKIP_PREFLIGHT_CHECK=true npm run build --workspace=app",
     "lint": "eslint ./app ./api",
-    "start": "cross-env npm run start --workspace=api",
+    "start": "npm run start --workspace=api",
     "dev:api": "npm run build && npm run dev --workspace=api"
   },
   "keywords": [],
@@ -22,8 +22,7 @@
   "license": "ISC",
   "devDependencies": {
     "eslint-plugin-cypress": "2.12.1",
-    "standard": "16.0.3",
-    "cross-env": "7.0.3"
+    "standard": "16.0.3"
   },
   "eslintConfig": {
     "ignorePatterns": "build",
