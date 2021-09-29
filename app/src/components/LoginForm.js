@@ -1,31 +1,32 @@
 import React from 'react'
 import Togglable from './Togglable'
 import PropTypes from 'prop-types'
+import { Form, Button } from 'react-bootstrap'
 
 export default function LoginForm ({ username, password, handleLogin, handlePasswordChange, handleUsernameChange }) {
   return (
     <Togglable buttonLabel='Show login'>
-      <form onSubmit={handleLogin}>
-        <div>
-          <input
+      <Form onSubmit={handleLogin}>
+        <Form.Group>
+          <Form.Control
             type='text'
             value={username}
             name='Username'
             placeholder='Username'
             onChange={handleUsernameChange}
           />
-        </div>
-        <div>
-          <input
+        </Form.Group>
+        <Form.Group>
+          <Form.Control
             type='password'
             value={password}
             name='Password'
             placeholder='Password'
             onChange={handlePasswordChange}
           />
-        </div>
-        <button>Login</button>
-      </form>
+        </Form.Group>
+        <Button type='submit' variant='primary'>Login</Button>
+      </Form>
     </Togglable>
   )
 }

@@ -6,6 +6,7 @@ import loginService from './services/login'
 import LoginForm from './components/LoginForm'
 import AddNotesForm from './components/AddNotesForm'
 import ErrorMessage from './components/ErrorMessage'
+import ListGroup from 'react-bootstrap/ListGroup'
 
 export default function App () {
   const [notes, setNotes] = useState([])
@@ -93,7 +94,7 @@ export default function App () {
   const notesToShow = notes
 
   return (
-    <div>
+    <div className='container'>
       <h1>Notes</h1>
       {
       errorMessage
@@ -121,7 +122,7 @@ export default function App () {
           {showAll ? 'important' : 'all'}
         </button>
       </div>
-      <ul>
+      <ListGroup>
         {notesToShow.map((note, i) => (
           <Note
             key={i}
@@ -130,7 +131,7 @@ export default function App () {
           />
         )
         )}
-      </ul>
+      </ListGroup>
     </div>
   )
 }

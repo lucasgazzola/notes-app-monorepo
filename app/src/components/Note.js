@@ -1,7 +1,7 @@
+import ListGroup from 'react-bootstrap/ListGroup'
+
 export const Note = ({ note }) => {
   return (
-    <li>
-      <p>{note.content}</p>
-    </li>
+    <ListGroup.Item>{note.content}</ListGroup.Item>
   )
 }
